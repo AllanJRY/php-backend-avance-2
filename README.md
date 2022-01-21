@@ -3,17 +3,17 @@
 Le but de l'exercice est de s'initier à l'utilisation d'interface.
 
 ### Partie 1
-- [ ] Créer plusieurs classes au choix.
-- [ ] Créer une interface nommée Debuggable et disposant d'une methode debug() qui retourne une chaine de caractères.
-- [ ] Implémenter l'interface Debug sur toutes les classes
-- [ ] Créer une classe DebugPrinter ayant une méthode nommée 'print' avec un paramètre de type Debuggable. Dans cette méthode, faire un echo de la méthode debug() du Debuggable passé en paramètre.
-- [ ] Dans un index.php, créer un objet de chacune des classes ainsi qu'une instance de DebugPrinter et appeler la méthode print pour tous les objets.
+- [x] Créer plusieurs classes au choix.
+- [x] Créer une interface nommée Debuggable et disposant d'une methode debug() qui retourne une chaine de caractères.
+- [x] Implémenter l'interface Debug sur toutes les classes
+- [x] Créer une classe DebugPrinter ayant une méthode nommée 'print' avec un paramètre de type Debuggable. Dans cette méthode, faire un echo de la méthode debug() du Debuggable passé en paramètre.
+- [x] Dans un index.php, créer un objet de chacune des classes ainsi qu'une instance de DebugPrinter et appeler la méthode print pour tous les objets.
 
 ### Partie 2
-- [ ] Si ce n'est déjà pas le cas, créer des classes comportant un titre ou un nom et/ou un prénom ou tout autres attributs d'identification.
-- [ ] Créer une interface Identifiable ayant une méthode getIdentity() qui retourne une chaine de caractère.
-- [ ] Implementer l'interface Identifiable sur les classes ayant des attributs d'identification
-- [ ] Dans l'index.php, créer des instances de toutes les classes (si ce n'est pas déjà fait) et appelé la méthode getIdentity sur chacun d'entre eux.
+- [x] Si ce n'est déjà pas le cas, créer des classes comportant un titre ou un nom et/ou un prénom ou tout autres attributs d'identification.
+- [x] Créer une interface Identifiable ayant une méthode getIdentity() qui retourne une chaine de caractère.
+- [x] Implementer l'interface Identifiable sur les classes ayant des attributs d'identification
+- [x] Dans l'index.php, créer des instances de toutes les classes (si ce n'est pas déjà fait) et appelé la méthode getIdentity sur chacun d'entre eux.
 
 ## Exercice 2 - Les Traits
 - [ ] Créer 4 classes : User, Animal, Vehicule, Vegetation (Pour le moment, pas besoin de les déclarer abstraites)
