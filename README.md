@@ -16,9 +16,9 @@ Le but de l'exercice est de s'initier à l'utilisation d'interface.
 - [x] Dans l'index.php, créer des instances de toutes les classes (si ce n'est pas déjà fait) et appelé la méthode getIdentity sur chacun d'entre eux.
 
 ## Exercice 2 - Les Traits
-- [ ] Créer 4 classes : User, Animal, Vehicule, Vegetation (Pour le moment, pas besoin de les déclarer abstraites)
-- [ ] Créer un trait Age comprenant un attribut $dateOfBirth de type DateTime, les Getters et Setters de cet attribut et une méthode getAge() qui retournera le nombre d'années de différence entre l'attribut $dateOfBirth et la date d'aujourd'hui (N'hésitez pas à vous aider du fichier objet-datetime.php).
-- [ ] Ajouter ce trait a toutes les classes, attention, il faut penser à initialiser l'attribut du trait par défaut ou dans le constructeur de la classe.
+- [x] Créer 4 classes : User, Animal, Vehicule, Vegetation (Pour le moment, pas besoin de les déclarer abstraites)
+- [x] Créer un trait Age comprenant un attribut $dateOfBirth de type DateTime, les Getters et Setters de cet attribut et une méthode getAge() qui retournera le nombre d'années de différence entre l'attribut $dateOfBirth et la date d'aujourd'hui (N'hésitez pas à vous aider du fichier objet-datetime.php).
+- [x] Ajouter ce trait a toutes les classes, attention, il faut penser à initialiser l'attribut du trait par défaut ou dans le constructeur de la classe.
 - [ ] Sur un index.php, créer des instances de vos classes avec des dates différentes et sur ces mêmes objets appeler les méthodes du trait Age.
 
 ## Exercice 3 - Système de panier orienté objet.
@@ -30,10 +30,28 @@ Vous pouvez récupérer la liste des produits que vous aviez utilisés avec Maxi
 Aussi dans notre cas, le panier aura aussi une liste de réductions/promotions.
 
 Ce qui est attendu :
-- [ ] Au minimum 3 classes : Cart, Product et Promotion.
-- [ ] Au moins un Trait (indice : Product et Promotion dispose d'un prix, même si dans le cas de la promotion, c'est la valeur de réduction appliquée)
-- [ ] Définir une interface nommée JsonConvertible composé d'une méthode toJson() qui retourne une chaine de caractères ainsi qu'une méthode **static** fromJson qui prend en paramètre une chaine de caractères et retourne 'self'.
-- [ ] Toutes les classes doivent implémenter l'interface JsonConvertible. Il faut essayer de définir le contenu de ses méthodes, il faudra faire en sorte d'utiliser les fonctions globales de php json_encode() et json_decode(). (Demandez de l'aide si vous bloquez, cette partie peut être assez compliquée).
-- [ ] Sur un index.php, il faut instancier les classes, remplir votre panier de produits et promotion.
-- [ ] Une fois fait, utilisez la classe Database fourni pour sauvegarder le panier dans un fichier et recharger le panier. (Pas besoin de retoucher la classe Database, lisez la si vous voulez comprendre son fonctionnement).
+- [x] Au minimum 3 classes : Cart, Product et Promotion.
+- [x] Au moins un Trait (indice : Product et Promotion dispose d'un prix, même si dans le cas de la promotion, c'est la valeur de réduction appliquée)
+- [x] Définir une interface nommée JsonConvertible composé d'une méthode toJson() qui retourne une chaine de caractères ainsi qu'une méthode **static** fromJson qui prend en paramètre une chaine de caractères et retourne 'self'.
+- [x] Toutes les classes doivent implémenter l'interface JsonConvertible. Il faut essayer de définir le contenu de ses méthodes, il faudra faire en sorte d'utiliser les fonctions globales de php json_encode() et json_decode(). (Demandez de l'aide si vous bloquez, cette partie peut être assez compliquée).
+- [x] Sur un index.php, il faut instancier les classes, remplir votre panier de produits et promotion.
+- [x] Une fois fait, utilisez la classe Database fourni pour sauvegarder le panier dans un fichier et recharger le panier. (Pas besoin de retoucher la classe Database, lisez la si vous voulez comprendre son fonctionnement).
 
+
+## Exercice 4 - Composer, namespace et autoloader
+- [ ] Créer un nouveau dossier
+- [ ] Se placer dedans depuis un terminal (VS Code et Phpstorm en ont un intégré)
+- [ ] Lancer la commande : ``composer init``
+- [ ] Une fois fait, il faut répondre à des questions de configuration. (Voir avec moi pour les réponses que vous devez donner)
+- [ ] Le projet utilise maintenant Composer, mais il faut paramétrer l'autoloader pour charger les classes, dans composer.json ajouter cette entrée si elle n'a pas déjà été généré :
+```json
+"autoload": {
+    "psr-4": {
+        "App\\": "src/" // <- défini le namespace de base pour le dossier où se trouve vos classes
+    }
+},
+```
+- [ ] Tester de créer des classes dans le dossier src en leur ajoutant un namespace (le namespace doit commencer par celui indiqué dans la config json plus haute, à savoir *App*)
+
+- [ ] Faire ``composer require symfony/var-dumper --dev`` pour ajouter la fonction dump() de symfony dans le projet en tant que dépendance de développement.
+- [ ] Ajouter twig : ``composer require twig/twig``

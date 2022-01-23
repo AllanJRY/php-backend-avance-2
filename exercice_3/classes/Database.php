@@ -33,10 +33,9 @@ class Database {
         $entity = null;
 
         if (class_exists($className)) {
-            $entityObject = new $className();
-
-            if ($entityObject instanceof JsonConvertible) {
-                $entity = $entityObject::fromJson(file_get_contents($this->buildPath($className)));
+            $implementedInterfaces = class_implements($className);
+            if ($implementedInterfaces && in_array(JsonConvertible::class, $implementedInterfaces)) {
+                $entity = $className::fromJson(file_get_contents($this->buildPath($className)));
             }
         }
         return $entity;
@@ -51,4 +50,6 @@ class Database {
     private function buildPath(string $className): string {
         return self::DB_FOLDER.$className.self::DB_FILE_EXT;
     }
+
+
 }
