@@ -51,6 +51,7 @@ Ce qui est attendu :
     }
 },
 ```
+- [ ] Rajouter dans l'index tout en haut : `require_once('./vendor/autoload.php')`, si le dossier vendor n'existe pas, lancez la commande : `composer install`
 - [ ] Tester de créer des classes dans le dossier src en leur ajoutant un namespace (le namespace doit commencer par celui indiqué dans la config json plus haute, à savoir *App*)
 
 Si vous avez une erreur parce qu'il ne trouve pas vos classes, tentez de regénérer les fichiers d'autoload:
