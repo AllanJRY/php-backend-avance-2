@@ -53,5 +53,10 @@ Ce qui est attendu :
 ```
 - [ ] Tester de créer des classes dans le dossier src en leur ajoutant un namespace (le namespace doit commencer par celui indiqué dans la config json plus haute, à savoir *App*)
 
+Si vous avez une erreur parce qu'il ne trouve pas vos classes, tentez de regénérer les fichiers d'autoload:
+```shell
+composer dump-autoload
+```
+
 - [ ] Faire ``composer require symfony/var-dumper --dev`` pour ajouter la fonction dump() de symfony dans le projet en tant que dépendance de développement.
 - [ ] Ajouter twig : ``composer require twig/twig``
